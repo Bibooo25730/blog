@@ -11,4 +11,3 @@ Hi。
 
 ### 春天不回来
 
-![avatar](log.PNG)
