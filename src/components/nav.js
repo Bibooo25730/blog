@@ -45,18 +45,18 @@ export default function Nav() {
         <Link
           href={`/pages/${id}`}
           key={id}
-          className={`${'inline-block -mb-px p-4 border-b hover:border-blue-600 hover:dark:border-blue-500 transition-all'} ${
-            router.asPath === `/pages/${id}` ? 'text-blue-600 dark:text-blue-500 border-blue-600 dark:border-blue-500' : ''
-          }`}
+          className={`${'inline-block -mb-px p-4 border-b hover:border-blue-600 hover:dark:border-blue-500 transition-all'} ${router.asPath === `/pages/${id}` ? 'text-blue-600 dark:text-blue-500 border-blue-600 dark:border-blue-500' : ''
+            }`}
         >
           {title}
         </Link>
       ))}
       <a
-        className={`${showPrompt && theme === 'light' ? 'text-blue-600 dark:text-blue-500 border-blue-600 dark:border-blue-500' : ''} ${"cursor-pointer xl:right-0 xl:absolute -mb-px p-4 border-b hover:border-blue-600 hover:dark:border-blue-500 transition-all"}`}
+        className={`${showPrompt && theme === 'light' ? 'nes-badge is-icon text-blue-600 dark:text-blue-500 border-blue-600 dark:border-blue-500' : 'nes-badge is-icon'} ${"nes-badge is-icon xl:right-0 xl:absolute -mb-px  border-b hover:border-blue-600 hover:dark:border-blue-500 transition-all"}`}
         onClick={handleThemeToggle}
       >
-        <span>灯泡</span>
+        <span class="is-dark">hi</span>
+        <span class="is-warning">灯泡</span>
       </a>
     </div>
   );
