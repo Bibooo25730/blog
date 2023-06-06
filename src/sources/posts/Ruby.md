@@ -1,5 +1,5 @@
 ---
-title: "Helloworld"
+title: "Ruby"
 date: "2023-06-6 23:57:57"
 categories:
   - Ruby
