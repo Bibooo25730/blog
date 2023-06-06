@@ -6,11 +6,9 @@ module.exports = {
     './src/lib/**/*.{js,ts,jsx,tsx}',
   ],
   theme:{
-    extends:{
-      fontFamily: {
+    fontFamily: {
          "sans":['zpix']
       }
-    }
   }
 
 }
