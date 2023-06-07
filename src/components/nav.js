@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-
+import { useDispatch } from 'react-redux';
+import { ToggleTheme } from "../service/theme";
 export default function Nav() {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
   const [showPrompt, setShowPrompt] = useState(false);
-
-  // Detect user's OS color preference and store it in localStorage on the first visit
+  const dispath = useDispatch();
   useEffect(() => {
     const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const storedTheme = localStorage.getItem('theme');
@@ -28,6 +28,7 @@ export default function Nav() {
   const handleThemeToggle = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
+    dispath (ToggleTheme(newTheme))
     localStorage.setItem('theme', newTheme);
   };
 
@@ -55,8 +56,8 @@ export default function Nav() {
         className={`${showPrompt && theme === 'light' ? 'nes-badge is-icon text-blue-600 dark:text-blue-500 border-blue-600 dark:border-blue-500' : 'nes-badge is-icon'} ${"nes-badge is-icon xl:right-0 xl:absolute -mb-px  border-b hover:border-blue-600 hover:dark:border-blue-500 transition-all"}`}
         onClick={handleThemeToggle}
       >
-        <span class="is-dark">hi</span>
-        <span class="is-warning">灯泡</span>
+        <span className="is-dark">hi</span>
+        <span className="is-warning">灯泡</span>
       </a>
     </div>
   );
