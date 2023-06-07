@@ -17,3 +17,10 @@ css 就是 shift
 
 评论则是修改 `src/components/comment.js`，这个怎么改就参考 DisqusJS 的 [readme](https://github.com/SukkaW/DisqusJS) 吧。
 
+## 留言板
+我使用的是 云mongdb
+你需要在  .env.local 将您各自的凭据替换为用户名、密码和数据库名称
+
+### theme
+
+主题状态交给 redux 管理了
