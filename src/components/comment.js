@@ -1,30 +1,62 @@
-import { DisqusJS } from 'disqusjs/react';
 import 'disqusjs/react/styles/disqusjs.css';
 import { useRouter } from 'next/router'
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { isUrl, isemail } from '../lib/rex';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { CommitQuery } from "../service/theme"
+import Tootip from './tootlp';
 export default function Comment() {
   const pathname = useRouter().asPath;
+  let textRef = useRef();
+  // list
+  let [comList, setComlist] = useState([]);
+  let [boel, setboel] = useState(false);
+  let [tooptitle, setTooptitle] = useState('');
   let [timeUrl, settimeUrl] = useState(null);
   let [timemail, settimemail] = useState(null);
   // 留言对象
   let [commObj, setComobj] = useState({
     name: '',
     email: '',
-    url: ''
+    url: '',
+    content: '',
+    path: pathname
   });
-  let themes = useSelector(state=>state.theme.themes)
-  console.log('store',themes)
+  const dispath = useDispatch();
+  let themes = useSelector(state => state.theme.themes)
+
+
   useEffect(() => {
     (themes === 'light' ? 'dark' : 'light')
+    dispath(CommitQuery()).unwrap()
+      .then((noriginalPromiseResult) => {
+        setComlist(noriginalPromiseResult.data)
+      })
+      .catch((rejectedValueOrSerializedError) => {
+        throw rejectedValueOrSerializedError
+      })
   }, [])
-  function handleComment() {
-    let { name, email, url } = commObj;
-    if ([name, email, url].some(val => val === '')) {
-      return null;
+  async function handleComment() {
+    let { name, email,content, url } = commObj;
+    name === '' ? console.log('123') : name
+    if ([name, email, content,url].some(val => val === '')) {
+      return setboel(true), setTooptitle('输入值为空');
     } else {
+      setboel(false);
       // 提交
+      let result = await fetch('http://localhost:3000/api/commt', {
+        method: 'POST',
+        body: JSON.stringify(commObj)
+      })
+      let res = await result.json()
+      if (res.status == 200) {
+        textRef.current.value = '';
+        setTooptitle('提交成功')
+
+      }
+
+
     }
   }
 
@@ -62,46 +94,63 @@ export default function Comment() {
       })
     }
   }
+  function handelContent(e) {
+    let { target } = e;
+    let { value } = target;
+    setComobj({
+      ...commObj,
+      content: value
+    })
+  }
+
   return (
     <>
+      {boel ? <Tootip>{tooptitle}</Tootip> : ''}
+
       {themes === 'dark' ? <section className="nes-container is-dark">
+
         <section className="message-list">
           <section className="message -left">
             <div className="nes-balloon from-left is-dark">
               <p>Hello 网友</p>
             </div>
           </section>
+          {comList.map((item,index) => (
 
-          <section className="message -right">
+            <section key={index} className="message -right  flex justify-end">
+              <div className="nes-balloon from-right is-dark  ">
+                <p>{item.content}</p>
+              </div>
+            </section>
+          ))}
 
-            <div className="nes-balloon from-right is-dark">
-              <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-            </div>
-          </section>
           <i className="nes-mario "></i>
 
         </section>
-      </section> : <section className="nes-container">
+      </section> : <section className="nes-container is-light">
         <section className="message-list">
           <section className="message -left">
 
             <div className="nes-balloon from-left">
-              <p>Hello 网友</p>
+              <p >Hello 网友</p>
             </div>
           </section>
+
 
           <section className="message -right">
 
-            <div className="nes-balloon from-right">
-              <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-            </div>
-          </section>
+<div className="nes-balloon from-right is-dark">
+  <p>'s sleep, I hope.</p>
+</div>
+</section>
+
+
           <i className="nes-mario "></i>
         </section>
       </section>}
       <section className='text-center mt-6 mb-8'>
         <label htmlFor="textarea_field"></label>
-        <textarea style={{ 'caretColor': 'red' }} placeholder="在这里输入你的评论" id="textarea_field" className="nes-textarea"></textarea>
+        <textarea ref={textRef} onChange={handelContent} style={{ 'caretColor': 'red' }} placeholder="在这里输入你的评论" id="textarea_field" className="nes-textarea"></textarea>
         <section className='flex flex-row'>
           <div className="nes-field basis-1/4">
             <label htmlFor="name_field">名字</label>
