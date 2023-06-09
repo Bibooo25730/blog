@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
       </header>
       <Nav />
       <main className='font-sans max-w-3xl mx-auto block p-6'>{children}</main>
-      <a className='font-sans layout fixed bottom-4 right-4 border p-4 block backdrop-blur z-50 bg-white/60 dark:bg-[#121212]/60  hover:border-blue-600 hover:dark:border-blue-500 transition-all' href='#'>↑</a>
+      <a className='font-sans layout fixed bottom-4 right-4  p-4 block backdrop-blur z-50 bg-white/60 dark:bg-[#121212]/60  hover:border-blue-600 hover:dark:border-blue-500 transition-all' href='#'><button type="button" className="nes-btn is-error">↑</button></a>
       <Footer />
     </>
   )
