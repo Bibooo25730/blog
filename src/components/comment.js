@@ -15,6 +15,8 @@ export default function Comment() {
   let [tooptitle, setTooptitle] = useState('');
   let [timeUrl, settimeUrl] = useState(null);
   let [timemail, settimemail] = useState(null);
+
+  console.log(pathname)
   // 留言对象
   let [commObj, setComobj] = useState({
     name: '',
@@ -29,14 +31,14 @@ export default function Comment() {
 
   useEffect(() => {
     (themes === 'light' ? 'dark' : 'light')
-    dispath(CommitQuery()).unwrap()
+    dispath(CommitQuery(pathname)).unwrap()
       .then((noriginalPromiseResult) => {
         setComlist(noriginalPromiseResult.data)
       })
       .catch((rejectedValueOrSerializedError) => {
         throw rejectedValueOrSerializedError
       })
-  }, [])
+  }, [tooptitle])
   async function handleComment() {
     let { name, email,content, url } = commObj;
     name === '' ? console.log('123') : name
@@ -45,7 +47,7 @@ export default function Comment() {
     } else {
       setboel(false);
       // 提交
-      let result = await fetch('http://localhost:3000/api/commt', {
+      let result = await fetch('https://www.bibooo.cn/api/commt', {
         method: 'POST',
         body: JSON.stringify(commObj)
       })
