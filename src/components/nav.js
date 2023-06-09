@@ -39,7 +39,7 @@ export default function Nav() {
           href={`/`}
           className="xl:left-0 xl:absolute inline-block -mb-px p-4 border-b hover:border-blue-600 hover:dark:border-blue-500 transition-all"
         >
-          主页
+          Home
         </Link>
       )}
       {process.env.nav.map(({ id, title }) => (
