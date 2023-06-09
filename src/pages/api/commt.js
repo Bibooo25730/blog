@@ -4,6 +4,7 @@ import clientPromise from "../../../lib/mongdb";
 export default async function handler(req, res) {
 
   const {pathname} = req.query;
+  console.log(pathname)
   const client = await clientPromise;
   const db = client.db("sample_mflix");
   switch (req.method) {

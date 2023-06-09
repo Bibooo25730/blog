@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { rejects } from "assert";
-import { resolve } from "path";
+
 
 
 const initialState = {
@@ -9,7 +8,7 @@ const initialState = {
 async function ssrFetch(path) {
     console.log(path)
     return new Promise((resolve,rejects)=>{
-        fetch(`https://www.bibooo.cn/?pathname=${path}`, {
+        fetch(`https://www.bibooo.cn/api/commt?pathname=${path}`, {
         method: 'GET'
     }).then(res=>{resolve(res.json())})
     .catch(err=>{rejects(err)})
