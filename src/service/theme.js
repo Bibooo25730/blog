@@ -6,9 +6,10 @@ import { resolve } from "path";
 const initialState = {
     themes: 'dark'
 }
-async function ssrFetch() {
+async function ssrFetch(path) {
+    console.log(path)
     return new Promise((resolve,rejects)=>{
-        fetch('http://localhost:3000/api/commt', {
+        fetch(`https://www.bibooo.cn/?pathname=${path}`, {
         method: 'GET'
     }).then(res=>{resolve(res.json())})
     .catch(err=>{rejects(err)})
@@ -19,8 +20,8 @@ async function ssrFetch() {
 
 export const CommitQuery = createAsyncThunk(
     "api/commit",
-    async () => {
-        return await ssrFetch()
+    async (path) => {
+        return await ssrFetch(path)
     }
 )
 const themeService = createSlice({
