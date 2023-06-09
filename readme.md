@@ -20,6 +20,7 @@ css 就是 shift
 ## 留言板
 我使用的是 云mongdb
 你需要在  .env.local 将您各自的凭据替换为用户名、密码和数据库名称
+需要替换 comment 和 theme 你自己的url
 
 ### theme
 
