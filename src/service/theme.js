@@ -6,9 +6,9 @@ const initialState = {
     themes: 'dark'
 }
 async function ssrFetch(path) {
-    console.log(path)
+    console.l
     return new Promise((resolve,rejects)=>{
-        fetch(`https://www.bibooo.cn/api/commt?pathname=${path}`, {
+        fetch(`https://www.bibooo.cn/api/commit?pathname=${path}`, {
         method: 'GET'
     }).then(res=>{resolve(res.json())})
     .catch(err=>{rejects(err)})
