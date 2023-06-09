@@ -33,3 +33,4 @@ yarn-error.log*
 /public/sitemap-*.xml
 /public/robots.txt
 /public/feed.xml
+.vercel
