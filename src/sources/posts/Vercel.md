@@ -1,5 +1,5 @@
 ---
-title: "代码的整洁之道"
+title: "错误记录"
 date: "2023-10-06 23:36:57"
 categories:
   - next.js
