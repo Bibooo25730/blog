@@ -1,7 +1,7 @@
 @tailwind utilities;
 /* latin */
 @font-face {
-	font-family: 'zpix',emoji;
+	font-family: 'zpix';
 	font-style: normal;
 	font-weight: 400;
 	src: url("../../public/font/zpix.woff2") format('woff2');
