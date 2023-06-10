@@ -33,6 +33,7 @@ export default function Comment() {
     (themes === 'light' ? 'dark' : 'light')
     dispath(CommitQuery(pathname)).unwrap()
       .then((noriginalPromiseResult) => {
+        console.log(noriginalPromiseResult)
         setComlist(noriginalPromiseResult.data)
       })
       .catch((rejectedValueOrSerializedError) => {
