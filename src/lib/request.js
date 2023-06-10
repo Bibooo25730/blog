@@ -2,7 +2,9 @@ import axios from "axios";
 import { config } from "process";
 
 const axionsInstance = axios.create({
-    baseURL:'https://www.bibooo.cn/',
+    // http://localhost:3000/
+    // https://www.bibooo.cn/
+    baseURL:'http://localhost:3000/',
     timeout:60 * 1000
 })
 
