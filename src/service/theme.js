@@ -7,7 +7,7 @@ const initialState = {
 }
 
 async function ssrFetch(path) {
-    return axiosFom.onGet(`/api/commt?pathname=${path}`)
+    return axiosFom.onGet(`/api/commt?pathname=${path.toLowerCase()}`)
 }
 
 
