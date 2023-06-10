@@ -4,7 +4,7 @@ import { config } from "process";
 const axionsInstance = axios.create({
     // http://localhost:3000/
     // https://www.bibooo.cn/
-    baseURL:'http://localhost:3000/',
+    baseURL:'https://www.bibooo.cn/',
     timeout:60 * 1000
 })
 
