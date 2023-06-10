@@ -141,10 +141,6 @@ export default function Comment() {
 
 
           <section className="message -right">
-
-<div className="nes-balloon from-right is-dark">
-  <p>'s sleep, I hope.</p>
-</div>
 </section>
 
 
