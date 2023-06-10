@@ -1,18 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
+import axiosFom from "../lib/request";
 
 
 const initialState = {
     themes: 'dark'
 }
+
 async function ssrFetch(path) {
-    console.l
-    return new Promise((resolve,rejects)=>{
-        fetch(`https://www.bibooo.cn/api/commit?pathname=${path}`, {
-        method: 'GET'
-    }).then(res=>{resolve(res.json())})
-    .catch(err=>{rejects(err)})
-    })
+    return axiosFom.onGet(`/api/commt?pathname=${path}`)
 }
 
 
