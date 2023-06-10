@@ -13,8 +13,8 @@ categories:
 
 我刚开始是以为 mondgb 没连接上，在开发环境上有行得通，生产环境上面就 504。我了解到 Vercel 如果连接超时 10s 就报错了。
 
-<center><img src = 'https://s3.bmp.ovh/imgs/2023/06/10/52f72238c121a3bf.png' ></center>
 
+<img src = 'https://s3.bmp.ovh/imgs/2023/06/10/52f72238c121a3bf.png' >
 
 #### 我以为是 fetch 的原因
 
