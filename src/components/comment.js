@@ -41,20 +41,20 @@ export default function Comment() {
       })
   }, [tooptitle])
   async function handleComment() {
+    setTooptitle('')
     let { name, email,content, url } = commObj;
-    name === '' ? console.log('123') : name
     if ([name, email, content,url].some(val => val === '')) {
+      console.log(13)
       return setboel(true), setTooptitle('输入值为空');
     } else {
       setboel(false);
       // 提交
-      let result = await fetch('https://www.bibooo.cn/api/commt', {
+      let result = await fetch('http://localhost:3000/api/commt', {
         method: 'POST',
         body: JSON.stringify(commObj)
       })
       let res = await result.json()
       if (res.status == 200) {
-        textRef.current.value = '';
         setTooptitle('提交成功')
 
       }
@@ -62,8 +62,8 @@ export default function Comment() {
 
     }
   }
-
   function handleChangeNmae(e) {
+    console.log(e)
     let { target } = e;
     let { value } = target;
     console.log(value)
@@ -73,6 +73,7 @@ export default function Comment() {
     })
   }
   function handleChangeEmail(e) {
+    console.log(e)
     let { target } = e;
     let { value } = target;
 
@@ -98,6 +99,7 @@ export default function Comment() {
     }
   }
   function handelContent(e) {
+    console.log(e)
     let { target } = e;
     let { value } = target;
     setComobj({
