@@ -1,5 +1,5 @@
 ---
-title: "代码的整洁之道"
+title: "next.js 的强大"
 date: "2023-06-11 23:57:57"
 categories:
   - Next.js
