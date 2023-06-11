@@ -49,7 +49,7 @@ export default function Comment() {
     } else {
       setboel(false);
       // 提交
-      let result = await fetch('http://localhost:3000/api/commt', {
+      let result = await fetch('https://www.bibooo.cn/api/commt', {
         method: 'POST',
         body: JSON.stringify(commObj)
       })
