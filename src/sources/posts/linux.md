@@ -1,6 +1,6 @@
 ---
 title: "Linux"
-date: "2023-6-13 23:36:57"
+date: "2023-06-13 23:36:57"
 categories:
   - next.js
 ---
