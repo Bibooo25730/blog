@@ -2,7 +2,7 @@
 title: "Linux"
 date: "2023-06-13 23:36:57"
 categories:
-  - next.js
+  - Linux
 ---
 
 吃水不忘挖井人 >Linux 由芬兰大学生李纳斯（Linus Torvalds） 和 后来陆续加入的众多爱好者共同开发完成。

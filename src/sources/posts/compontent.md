@@ -2,7 +2,7 @@
 title: "清理C盘"
 date: "2023-06-13 23:57:57"
 categories:
-  - 我好想换 mac 啊
+  - Recommend
 ---
 
 我就想换个 mac 啊
