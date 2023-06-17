@@ -28,7 +28,7 @@ https://www.bilibili.com/video/BV1zP411w7EA/?spm_id_from=333.880.my_history.page
 
 这个教程也不能说有坑吧，输入的命令 hp1， 如果你是其他盘：通过在“运行”对话框中键入
 diskpart来启动diskpart实用程序，然后，在命令行中键入list disk命令，然后按Enter。
-上面就会有分区号的。
+上面就会有分区号的
 
 
 ### Ubuntu
