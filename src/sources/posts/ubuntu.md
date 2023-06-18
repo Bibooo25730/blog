@@ -23,8 +23,8 @@ emmm,你如果是这样的就换方式吧，现在的量产工具还停留在emm
 你肯定不行洛，所以我将找了个不需要 u盘 安装的。
 
 ```
-https://www.bilibili.com/video/BV1zP411w7EA/?spm_id_from=333.880.my_history.page.click&vd_source=d7e9b8a77652842eb007872b3747fff6
 ```
+https://www.bilibili.com/video/BV1zP411w7EA/?spm_id_from=333.880.my_history.page.click&vd_source=d7e9b8a77652842eb007872b3747fff6
 
 这个教程也不能说有坑吧，输入的命令 hp1， 如果你是其他盘：通过在“运行”对话框中键入
 diskpart来启动diskpart实用程序，然后，在命令行中键入list disk命令，然后按Enter。
