@@ -63,7 +63,7 @@ export default function Archives({ postsByYear, allPostsData }) {
           }`}
           onClick={handleResetCategory}
         >
-          全部
+          all
         </button>
         {/* 添加其他分类按钮 */}
         {allCategories.map((category) => (
