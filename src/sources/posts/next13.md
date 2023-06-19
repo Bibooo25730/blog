@@ -1,6 +1,6 @@
 ---
 title: "next.js 13"
-date: "2023-06-11 23:57:57"
+date: "2023-06-19 23:57:57"
 categories:
   - Next.js
 ---
