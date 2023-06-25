@@ -1,8 +1,8 @@
 ---
-title: ""
+title: "Ubuntu 下使用 Clash For Windows"
 date: "2023-06-25 03:57:57"
 categories:
-  - Ubuntu 下使用 Clash For Windows
+  - Ubuntu
 ---
 
 走就走了，还带走了我的鲍勃马利
