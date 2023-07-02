@@ -88,4 +88,5 @@ Main PID: 10055 (code=exited, status=14)
 
 绿色就OK了，不得不说 linux 真的是需要耐心，好像国家要求公职人员都用 linux 好像。
 
+### mongosh 使用
 
