@@ -4,7 +4,7 @@ module.exports = withExportImages({
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['bibooo.cn', 'gravatar.loli.net'],
+    domains: ['bibooo.cn', 'cdn.v2ex.com'],
     formats: ['image/avif', 'image/webp'],
   },
   env: {
