@@ -56,7 +56,7 @@ export default function Archives({ postsByYear, allPostsData }) {
             ).length} 篇文章。`
           : `目前共有 ${allPostsData.length} 篇文章。`}
       </p>
-      <div className="flex justify-center space-x-2 mt-4">
+      <div className="flex justify-center space-x-2 mt-4 flex-wrap">
         <button
           className={`backdrop-blur bg-white/60 dark:bg-[#121212]/60 py-2 px-4 border hover:border-blue-600 hover:dark:border-blue-500 transition-all ${
             selectedCategory === '' ? 'text-blue-600 dark:text-blue-500 border-blue-600 dark:border-blue-500' : ''
