@@ -2,7 +2,7 @@
 title: "验证码 & Puppeteer"
 date: "2023-07-07 03:57:57"
 categories:
-  - 今天登陆了QQ，发现QQ居然用图像验证码了，图像处理和机器学习算法这好像也是个方向啊。
+  - Puppeteer
 ---
 
 ### 推演

@@ -2,7 +2,7 @@
 title: "编程随想"
 date: "2023-06-19 23:57:57"
 categories:
-  - 一些谈话
+  - passing thought
 ---
 
 局限在开发里,容易成为工具人，红利期已经过了。
