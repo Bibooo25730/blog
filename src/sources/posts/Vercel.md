@@ -2,7 +2,7 @@
 title: "错误记录"
 date: "2023-05-06 23:36:57"
 categories:
-  - next.js
+  - Next.js
 ---
 
 在 Vercel 部署的 next.js 集成 mongdb 出现 504错误
