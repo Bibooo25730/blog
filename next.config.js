@@ -23,7 +23,14 @@ module.exports = withExportImages({
       id:'archives',
       title:'Archive',
     }],
-    links: [{ //友链
+    links: [
+      { //友链
+        name: "十点差三分",
+        url: "http://zhynxq.top/",
+        img: "http://zhynxq.top/upload/6026f331-aec0-40ee-b695-c19027804aae.png",
+        text: "我的班长"
+      },
+      { //友链
         name: "淡白博客",
         url: "https://p00q.cn/",
         img: "https://cdn.v2ex.com/gravatar/581961423c604841d0a4b2736214e035?s=256&d=mm",
