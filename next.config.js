@@ -1,10 +1,22 @@
 const withExportImages = require('next-export-optimize-images')
 
+
+module.exports = {
+  webpack(config, { dev, isServer }) {  
+    if (!dev && isServer) {  
+      config.resolve.alias['@styles'] = path.resolve(__dirname, 'src/styles/NES.css')  
+      config.module.rules.push({  
+        test: /\.css$/,  
+        use: ['style-loader', 'css-loader'],  
+        include: /@styles/  
+      })  
+    }  
+  }  
+}
 module.exports = withExportImages({
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['bibooo.cn', 'cdn.v2ex.com'],
     formats: ['image/avif', 'image/webp'],
   },
   env: {
