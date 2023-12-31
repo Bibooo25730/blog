@@ -1,5 +1,5 @@
 ## next
-css 就是 shift
+
 
 ## 写文章
 终端输入 `npm run new 文章id` 就会在 `src/sources/posts` 下生成一个 `文章id.md`。
