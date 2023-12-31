@@ -1,10 +1,8 @@
-const withExportImages = require('next-export-optimize-images')
-
-
-module.exports = withExportImages({
+module.exports = {
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    domains: ['bibooo.cn', 'zhynxq.top','cdn.v2ex.com','shoka.lostyu.me','c0smx.com','lza59.com','blog.fanjunyang','liuzepeng.com','image.idealclover.cn','mewfamilyblog.files.wordpress.com','blog.tomhuang2000.com','cdn.nothamor.cn','blog.tomhuang2000.com','blog.tomhuang2000.com','mrwu.red','cdn.jsdelivr.net','sdn.geekzu.org','www.mrwu.red','icharle.com','www.php.wf','lovemen.cc','n.vlo.cc','www.eray.cc'],
     formats: ['image/avif', 'image/webp'],
   },
   env: {
@@ -128,4 +126,4 @@ module.exports = withExportImages({
       },
     ],
   }
-})
+}
