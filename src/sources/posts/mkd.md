@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL1"
+title: "Copy Emoji"
 date: "2024-01-20 23:57:57"
 categories:
   - project

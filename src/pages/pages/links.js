@@ -1,7 +1,19 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../../components/layout';
+import OpenAI from "openai";
+const openai = new OpenAI({ apiKey: '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',dangerouslyAllowBrowser: true});
 
+async function main() {
+  const completion = await openai.chat.completions.create({
+    messages: [{ role: "system", content: "You are a helpful assistant." }],
+    model: "gpt-3.5-turbo",
+  });
+
+  console.log(completion.choices[0]);
+}
+
+main();
 
 export default function Link() {
   return (
