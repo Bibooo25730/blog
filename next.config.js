@@ -115,7 +115,7 @@ module.exports = {
       { //友链
         name: "华岁云小屋",
         url: "https://www.vlo.cc/",
-        img: "https://n.vlo.cc/uploads/2023/02/38aded5b5b16ae0c.png",
+        img: "https://mio.vlo.cc/image/2408/66c74f5467726.webp",
         text: "华岁De日常。"
       },
       { //友链
