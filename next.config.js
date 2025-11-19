@@ -25,7 +25,7 @@ module.exports = {
       { //友链
         name: "十点差三分",
         url: "http://zhynxq.top/",
-        img: "http://zhynxq.top/upload/6026f331-aec0-40ee-b695-c19027804aae.png",
+        img: "https://cdn.v2ex.com/gravatar/581961423c604841d0a4b2736214e035?s=256&d=mm",
         text: "我的班长"
       },
       { //友链
@@ -55,7 +55,7 @@ module.exports = {
       { //友链
         name: "DragonJay",
         url: "https://blog.fanjunyang.zone",
-        img: "https://cdn.jsdelivr.net/gh/LIlGG/cdn@1.0.1/img/Sakura/images/smilies/icon_%20https.gif",
+        img: "https://cdn.v2ex.com/gravatar/581961423c604841d0a4b2736214e035?s=256&d=mm",
         text: "My web3 blog。"
       },
       { //友链
@@ -67,7 +67,7 @@ module.exports = {
       { //友链
         name: "idealclover",
         url: "https://idealclover.top/",
-        img: "https://image.idealclover.cn/blog/assets/icon.png",
+        img: "https://cdn.v2ex.com/gravatar/581961423c604841d0a4b2736214e035?s=256&d=mm",
         text: "Stay simple, stay naive。"
       },
       { //友链
@@ -79,7 +79,7 @@ module.exports = {
       { //友链
         name: "欧尼酱",
         url: "https://www.nothamor.cn/",
-        img: "https://cdn.nothamor.cn/5ae46811094e6.jpg",
+        img: "https://cdn.v2ex.com/gravatar/581961423c604841d0a4b2736214e035?s=256&d=mm",
         text: "浑水摸鱼的咸鱼一条，伪Geek。"
       },
       { //友链
@@ -115,7 +115,7 @@ module.exports = {
       { //友链
         name: "华岁云小屋",
         url: "https://www.vlo.cc/",
-        img: "https://mio.vlo.cc/image/2408/66c74f5467726.webp",
+        img: "hhttps://img.lenyiin.com/app/hide.php?key=a1h6bU0ya2UwQkQ4azhOMkV4Tm9qbEFIdGZ3ZnVZSHc5Wm1GU2xnPQ==",
         text: "华岁De日常。"
       },
       { //友链
