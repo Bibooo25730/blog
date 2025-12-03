@@ -87,10 +87,10 @@ Buffer 是 Node.js 中处理二进制数据的核心类，类似于其他语言�
 
 在 V8 堆外分配内存（固定大小，不参与垃圾回收）
 // JavaScript 普通对象 - 在 V8 堆内存中
----
+<!-- ---
 const obj = { name '张三', age 25 };
 const arr = [1, 2, 3, 4, 5];
-const str = 'Hello World';
+const str = 'Hello World'; -->
 ---
 // 特点：
 // 1. 由 V8 引擎管理分配和回收
@@ -100,7 +100,7 @@ const str = 'Hello World';
 
 Buffer 内存（堆外内存中）
 ---
-const buffer = Buffer.alloc(1024); // 分配1KB内存
+<!-- const buffer = Buffer.alloc(1024); // 分配1KB内存 -->
 ---
 // 特点：
 // 1. 由 Node.js C++ 层直接调用操作系统 API 分配
@@ -159,7 +159,7 @@ Buffer可变，可直接修改
 └─────────────────────────────────────────────────┘
 ######  服务器应用容易内存只增不减
 ---
-const cache = new Map();
+<!-- const cache = new Map();
 
 setInterval(() => {
   // 定时任务累积数据
@@ -169,51 +169,51 @@ setInterval(() => {
   // 问题：旧数据很少删除
   // 结果：老生代不断增长
   // 触发频繁的 Mark-Sweep GC
-}, 1000);
+}, 1000); -->
 ---
 // 解决方案：使用 WeakMap 或 LRU 缓存
 ---
-const weakCache = new WeakMap();  // 不阻止 GC
+<!-- const weakCache = new WeakMap();  // 不阻止 GC -->
 ---
 # 1. 增加老生代大小（减少 GC 频率）
-node --max-old-space-size=4096 server.js  # 4GB
+<!-- node --max-old-space-size=4096 server.js  # 4GB -->
 ---
 # 2. 增加新生代大小（适合创建大量临时对象）
-node --max-semi-space-size=64 server.js  # 64MB 新生代
+<!-- node --max-semi-space-size=64 server.js  # 64MB 新生代 -->
 ---
 # 3. 调整 GC 策略
-node --nouse-idle-notification server.js  # 禁用空闲时GC
+<!-- node --nouse-idle-notification server.js  # 禁用空闲时GC -->
 ---
 # 4. 使用新的 GC 算法（Orinoco）
 
 ---
-node --max-old-space-size=4096 \
+<!-- node --max-old-space-size=4096 \
      --gc-interval=100 \
-     server.js
+     server.js -->
 ---
 ##### 内存泄漏检测
 # 1. 使用 heapdump
 ---
-npm install heapdump
+<!-- npm install heapdump -->
 ---
 
 # 代码中
 ---
-const heapdump = require('heapdump');
+<!-- const heapdump = require('heapdump');
 setInterval(() => {
   heapdump.writeSnapshot(`heap-${Date.now()}.heapsnapshot`);
-}, 60000);  # 每分钟拍快照
+}, 60000);  # 每分钟拍快照 -->
 ---
 # 2. 使用 Chrome DevTools
 ---
-node --inspect server.js
+<!-- node --inspect server.js -->
 ---
 # 然后在 chrome://inspect 分析内存
 
 # 3. 使用 clinic.js（生产推荐）
 ---
-npm install -g clinic
-clinic doctor -- node server.js
+<!-- npm install -g clinic
+clinic doctor -- node server.js -->
 ---
 
 #### C++ 插件是 Node.js 性能优化的终极武器，但需要谨慎使用。只在真正需要时使用，并确保正确处理内存、错误和线程安全。
