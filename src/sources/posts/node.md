@@ -88,7 +88,7 @@ Buffer 是 Node.js 中处理二进制数据的核心类，类似于其他语言�
 在 V8 堆外分配内存（固定大小，不参与垃圾回收）
 // JavaScript 普通对象 - 在 V8 堆内存中
 ---
-const obj = { name: '张三', age: 25 };
+const obj = { name '张三', age 25 };
 const arr = [1, 2, 3, 4, 5];
 const str = 'Hello World';
 ---
