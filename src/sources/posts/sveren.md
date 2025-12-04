@@ -5,6 +5,10 @@ categories:
   - Node
 ---
 
+# come back
+
+我熟悉一下 node 的 文档,有一年没更了，这一年经历了很多，明白了 命里有时终须有，命里无时莫强求.
+
 ### Node.js String Decoder 完全指南
 
 String Decoder 是 Node.js 的核心模块，专门用于处理 Buffer 到字符串的解码，特别是在处理多字节字符（如 UTF-8）时，它能正确处理字符边界，避免乱码。
