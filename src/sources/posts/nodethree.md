@@ -13,7 +13,7 @@ categories:
 
 ##### 模块导入和特性检查
 ```
-const crypto = require('crypto');
+const crypto = require('crypto');.
 
 // 1. 检查支持的特性
 console.log('支持的哈希算法:', crypto.getHashes());
