@@ -203,7 +203,7 @@ Provider 的 value 属性：
 ```
 
 ## 🚨 重要注意事项
-
+```
 .current 属性的可变性：你可以直接修改 ref.current 的值。与 state 不同，修改 `.current 不会触发组件的重新渲染。
 
 初始化开销：useRef(initialValue) 的初始值仅在首次渲染时被使用，后续渲染会返回同一个 ref 对象。
@@ -211,7 +211,7 @@ Provider 的 value 属性：
 ref 与 useEffect 的依赖项：ref.current 是一个可变值，不应被列入 useEffect 的依赖数组中，因为修改它不会触发 useEffect 的重新执行。如果逻辑依赖当前 ref 值，通常使用回调 ref 或将其提升至 state。
 
 服务端渲染下的 null：在 Next.js 的服务端渲染期间，所有关联 DOM 的 ref.current 都为 null。这是预期行为，也是为什么必须在 useEffect 中访问它的根本原因。
-
+```
 ## 💎 总结
 
 本质：useRef 是一个用于持有可变引用的工具。
