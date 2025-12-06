@@ -213,7 +213,7 @@ ref 与 useEffect 的依赖项：ref.current 是一个可变值，不应被列�
 服务端渲染下的 null：在 Next.js 的服务端渲染期间，所有关联 DOM 的 ref.current 都为 null。这是预期行为，也是为什么必须在 useEffect 中访问它的根本原因。
 ```
 ## 💎 总结
-
+```
 本质：useRef 是一个用于持有可变引用的工具。
 
 不变性：它返回的 ref 对象本身在组件的整个生命周期中是稳定不变的（{ current: ... }）。
@@ -221,7 +221,7 @@ ref 与 useEffect 的依赖项：ref.current 是一个可变值，不应被列�
 跨环境一致性：其核心 API 在纯 React 和 Next.js 中完全一致。
 
 Next.js 关键点：在 Next.js 中，任何对 ref.current（DOM节点）的直接操作，都必须放置在 useEffect、useLayoutEffect 或事件处理函数中，以确保在客户端执行。
-
+```
 
 简单来说，无论在哪，当你需要“跳出”React的声明式范式，去直接接触一个不会因自身变化而触发视图更新的持久化值或真实的 DOM 节点时，useRef 就是你的工具。在 Next.js 中，只需额外注意将 DOM 操作安全地放在客户端生命周期钩子中即可
 
