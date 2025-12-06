@@ -114,7 +114,7 @@ useState 的每次 setState 都会触发重新渲染。对于复杂对象/数组
 ## 🚨 重要注意事项
 “use client” 指令：创建 Context 和消费 Context 的组件文件顶部必须添加 'use client';，这是 Next.js 的硬性规定。
 
-Provider 无法包裹服务端组件：你不能用 <ThemeProvider> 直接包裹一个标记为服务端组件或默认的服务端组件。但可以包裹 {children}，只要这些 children 在最终渲染时是客户端组件。
+Provider 无法包裹服务端组件：你不能用 <!-- <ThemeProvider>  -->直接包裹一个标记为服务端组件或默认的服务端组件。但可以包裹 {children}，只要这些 children 在最终渲染时是客户端组件。
 
 默认值的局限：createContext(defaultValue) 中的 defaultValue 仅在消费组件找不到匹配的 Provider 时生效。在 Next.js 混合渲染环境下，服务端组件无法使用 useContext，因此这个默认值主要是为客户端组件提供的安全后备。
 
@@ -144,7 +144,8 @@ Provider 无法包裹服务端组件：你不能用 <ThemeProvider> 直接包裹
 
 特性维度	纯 React（客户端应用）	Next.js（App Router）
 创建与使用	在任何组件文件中直接使用 createContext, useContext，无需 ‘use client’ 指令。	所有涉及 Context 的文件必须在顶部添加 ‘use client’ 指令。
-Provider 的放置	通常直接包裹整个 <App /> 组件，没有任何限制。	Provider 只能包裹客户端组件或其子树，无法直接包裹服务端组件。
+
+ <!-- Provider -->的放置	通常直接包裹整个 <App /> 组件，没有任何限制。	<!-- Provider --> 只能包裹客户端组件或其子树，无法直接包裹服务端组件。
 数据来源	数据通常来自客户端状态（如 useState）或客户端异步获取（useEffect + fetch）。	常需将服务端获取的数据通过 Props 先“注入”到客户端组件，再放入 Context。
 心智模型	“在纯粹的客户端树中共享状态”。	“跨越客户端边界的共享状态，需注意服务端与客户端的鸿沟”。
 
@@ -157,7 +158,7 @@ Context 的 value 发生变化时，所有使用了 useContext 的组件都会�
 
 优化策略：将不同领域的 Context 拆分开（如 UserContext, UIContext），或对频繁更新的部分使用状态管理库。
 
-Provider 的 value 属性：
+<!-- Provider --> 的 value 属性：
 
 务必避免每次渲染都创建一个新的对象，这会导致不必要的子组件重渲染。
 
