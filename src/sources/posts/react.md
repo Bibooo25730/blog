@@ -114,7 +114,7 @@ useState 的每次 setState 都会触发重新渲染。对于复杂对象/数组
 ## 🚨 重要注意事项
 “use client” 指令：创建 Context 和消费 Context 的组件文件顶部必须添加 'use client';，这是 Next.js 的硬性规定。
 
-{/* Provider */} 无法包裹服务端组件：你不能用 {/* Provider */}直接包裹一个标记为服务端组件或默认的服务端组件。但可以包裹 {children}，只要这些 children 在最终渲染时是客户端组件。
+{/* Provider */} 无法包裹服务端组件：你不能用 {/* Provider */}直接包裹一个标记为服务端组件或默认的服务端组件。但可以包裹{/* children */} {}，只要这些 {/* children */} 在最终渲染时是客户端组件。
 
 默认值的局限：createContext(defaultValue) 中的 defaultValue 仅在消费组件找不到匹配的 {/* Provider */} 时生效。在 Next.js 混合渲染环境下，服务端组件无法使用 useContext，因此这个默认值主要是为客户端组件提供的安全后备。
 
